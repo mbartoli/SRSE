@@ -36,9 +36,24 @@ def countSyllables(word):
     return count
 
 
+def scoreHuerta(text):
+    tokenizer = nltk.data.load('tokenizers/punkt/spanish.pickle')
+    sample = tokenizer.tokenize(text.decode("utf8"), text)
+    totalSentences = len(sample)
+    totalWords = 0
+    totalSyllables = 0
+
+    for i in range(0, totalSentences):
+        sentence = sample[i].split()
+        numOfWords = len(sentence)
+        for j in range(0, numOfWords):
+            totalSyllables = totalSyllables + countSyllables(sentence[j])
+        totalWords = totalWords + numOfWords
+
+
 def main():
-    word = "Beetle"
-    print countSyllables(word)
+    sentence = "Hola, come estas mi amigo"
+    print scoreHuerta(sentence)
 
 
 if __name__ == "__main__":
