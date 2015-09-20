@@ -75,7 +75,7 @@ def scoreHuerta(text):
 
 
 def main():
-    sentence = "Hola, come estas mi amigo"
+    sentence = "Un grupo de venezolanos y colombianos marcharon hoy por las calles de Nueva York para reclamar la liberacion del opositor venezolano Leopoldo Lopez y para pedir que se garanticen los derechos de la poblacion afectada por la crisis fronteriza entre los dos paises. Decenas de manifestantes se concentraron primero ante el consulado de Venezuela, en el Midtown de Manhattan, y luego se desplazaron a pie por esa centrica zona hasta concluir frente a la sede de la mision venezolana ante Naciones Unidas. Portando banderas venezolanas, colombianas y estadounidenses, los participantes en la protesta mostraron tambien numerosos carteles contra el Gobierno de Nicolas Maduro y expresando su solidaridad con los colombianos expulsados recientemente del pais vecino."
     print scoreHuerta(sentence)
 
 
